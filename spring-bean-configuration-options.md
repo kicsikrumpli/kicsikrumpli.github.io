@@ -28,6 +28,8 @@ In the example it is assumed that the inteface SomeInterface is implemented by t
 				private SomeInterface someInterfaceBean;
 			...
 			}
+
+NB! To declare scope use @Scope annotation in conjunction with @Bean.
 			
 ## Provider interface
 
