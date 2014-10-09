@@ -81,11 +81,13 @@ NB! the Spring specific alternative to Provider<?> interface is ObjectFactory<?>
 			   </bean>
 			</beans>
 
+			...
+			
 			package a.b.c;
 			
-			 import org.springframework.beans.factory.ObjectFactory;
+			import org.springframework.beans.factory.ObjectFactory;
 			
-			 public class MyClientBean {
+			public class MyClientBean {
 			
 			   private ObjectFactory<MyService> myServiceFactory;
 			
@@ -98,7 +100,7 @@ NB! the Spring specific alternative to Provider<?> interface is ObjectFactory<?>
 			     MyService service = this.myServiceFactory.getObject();
 			     // use the service object to effect the business logic...
 			   }
-			 }
+			}
 
 source: http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/config/ObjectFactoryCreatingFactoryBean.html
 
