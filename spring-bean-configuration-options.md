@@ -19,7 +19,7 @@ The annotation '@Configuration tells Spring that this particular class may conta
 				}
 			}
 			
-In the example it is assumed that the inteface SomeInterface is implemented by the classes BanTypeA and BeanTypeB. To refer to these beans we can use the annotaion '@Qualifier, like so:
+In the example it is assumed that the inteface SomeInterface is implemented by the classes BeanTypeA and BeanTypeB. To refer to these beans we can use the annotaion '@Qualifier, like so:
 
 			@Service
 			public class SomeService {
@@ -28,6 +28,8 @@ In the example it is assumed that the inteface SomeInterface is implemented by t
 				private SomeInterface someInterfaceBean;
 			...
 			}
+
+NB! To declare scope use @Scope annotation in conjunction with @Bean.
 			
 ## Provider interface
 
@@ -66,7 +68,45 @@ To get hold of an instance of SomeBean in a client class we need to use its prov
 				}
 				...
 			}
+
+NB! the Spring specific alternative to Provider<?> interface is ObjectFactory<?> which can be either @Autowired or with an xml-based configuration requires ObjectFactoryCreatingFactoryBean to be configured. Example from Spring documentation:
+
+			<beans>
+			   <!-- Prototype bean since we have state -->
+			   <bean id="myService" class="a.b.c.MyService" scope="prototype"/>
+			   <bean id="myServiceFactory"
+			       class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">
+			     <property name="targetBeanName"><idref local="myService"/></property>
+			   </bean>
+			   <bean id="clientBean" class="a.b.c.MyClientBean">
+			     <property name="myServiceFactory" ref="myServiceFactory"/>
+			   </bean>
+			</beans>
+
+			...
 			
+			package a.b.c;
+			
+			import org.springframework.beans.factory.ObjectFactory;
+			
+			public class MyClientBean {
+			
+			   private ObjectFactory<MyService> myServiceFactory;
+			
+			   public void setMyServiceFactory(ObjectFactory<MyService> myServiceFactory) {
+			     this.myServiceFactory = myServiceFactory;
+			   }
+			
+			   public void someBusinessMethod() {
+			     // get a 'fresh', brand new MyService instance
+			     MyService service = this.myServiceFactory.getObject();
+			     // use the service object to effect the business logic...
+			   }
+			}
+
+source: http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/config/ObjectFactoryCreatingFactoryBean.html
+
 ## Lookup-method
 
 http://www.nurkiewicz.com/2010/08/creating-prototype-spring-beans-on.html
+
