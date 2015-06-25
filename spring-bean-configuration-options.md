@@ -106,6 +106,10 @@ NB! the Spring specific alternative to Provider<?> interface is ObjectFactory<?>
 
 source: http://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/beans/factory/config/ObjectFactoryCreatingFactoryBean.html
 
+### idref vs. ref
+- `idref` passes reference to bean name
+- `ref` passes reference to bean instance
+
 ## Lookup-method
 
 http://www.nurkiewicz.com/2010/08/creating-prototype-spring-beans-on.html
