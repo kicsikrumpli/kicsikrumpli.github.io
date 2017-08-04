@@ -53,7 +53,7 @@ Example Training Set
 
 ### Cost Funtion
 - want: choose parameters $$\theta_{0}$$ and $$\theta_{1}$$ so that $$h_{\theta}(x)$$ is as close to $$y$$ for every training example as possible
-- want: minimize cost function $$\text{min}_{\theta_{0}, \theta_{1}} \frac{1}{2m}\sum_{i=1}^{m}{(h_{\theta}(x^{(i)})-y^{(i)})^2}$$
+- want: minimize cost function $$\min_{\theta_{0}, \theta_{1}} \frac{1}{2m}\sum_{i=1}^{m}{(h_{\theta}(x^{(i)})-y^{(i)})^2}$$
 - cost function J is the squared error function we wish to minimize
 
 $$\begin{aligned} J(\theta_{0}, \theta_{1}) & = \frac{1}{2m}\sum_{i=1}^{m}{(h_{\theta}(x^{(i)})-y^{(i)})^2} \\ & = \frac{1}{2m}\sum_{i=1}^{m}{(\theta_{0} + \theta_{1}\cdot x^{(i)}-y^{(i)})^2}\end{aligned}$$
@@ -472,9 +472,9 @@ To address overfitting one can
 ### Intuition
 In the example if we penalize $$\theta_3$$ and $$\theta_4$$ and make them small, e.g.:
 $$
-    \text{min}_{\theta} \frac{1}{2m}\sum^{m}_{i=1}\big(h_{\theta}(x^{(i)} - y^{(i)})\big)^2 + 1000\cdot\theta^2_3 + 1000\cdot\theta^2_4
+    \min_{\theta} \frac{1}{2m}\sum^{m}_{i=1}\big(h_{\theta}(x^{(i)} - y^{(i)})\big)^2 + 1000\cdot\theta^2_3 + 1000\cdot\theta^2_4
 $$
-Smoothes the hypothesis making it fit the thaining set less, but allows it to generalize better.
+Smoothes the hypothesis making it fit the training set less, but allows it to generalize better.
 
 ### Regularization Parameter
 Assign small values to every parameter (not just the higher order ones, as demonstrated for the intuition), i.e.: $$\theta_0, \theta_1, \cdots, \theta_n$$
