@@ -5,8 +5,7 @@ date:   2018-01-30 15:37:54 +0200
 categories: til docker jenkins
 ---
 
-## Dockerizing Jenkins
-### Pets vs. Cows
+## Pets vs. Cows
 After installing Jenkins and launching it for the first time, we are greeted by a setup wizard. This tells tales about how Jenkins is supposed to be viewed as a pet. Install it; fiddle with the setup; make some changes; add build scripts via the gui; or configure a build to use the Jenkinsfile bundled with the app; make some more changes; do the occasional backup of JENKINS_HOME, maybe automate it even; we may even want to enable Jenkins to use multiple versions of Maven, or Java, let's configure those too; and slowly, like the proverbial dog, it starts to resemble its owner. 
 
 This is not quite what we want. We want cows, not pets. We want something immutable, which can be spun up from a version controlled configuration automatically, instead of following setup instructions in a chicken soup recipe (enough with the farm references already 
@@ -15,7 +14,7 @@ This is not quite what we want. We want cows, not pets. We want something immuta
 
 , I hear you). 
 
-### Docker to the rescue! 
+## Docker to the rescue! 
 There is in fact an official Docker image for Jenkins. On launch it greets with the same one-time config wizard, as with a locally installed version. Looking at the Dockerfile, it declares `JENKINS_HOME` as a volume to persist configuration We are still grooming a pet, except that instead of it running around freely in your apartment, it now lives in a fancy pet crate. 
 
 ![dog in a crate]({{ site.url }}/img/2018-02-02-dockerized-jenkins/crate.gif)
@@ -54,7 +53,7 @@ Pass a list of plugins to `install-plugins.sh` to download and install. Plugin l
 
 Copy all of this into the container, we now have a working, preconfigured, immutable Jencow.
 
-### Gotchas
+## Gotchas
 As the difference between theory in practice goes, there have been some unexpected gotchas. For one, although Docker gives us platform independent deployment, that does not mean that it should guard against the idiosyncrasies of cross platform development. Here's a little thought experiment. Put a path into a file, say `/etc/foo`. Put this file, let's call it `foo.txt`, into git, and check it out on a Windows machine. Proceed by copying it into a Linux based Docker image. To spoil the punchline, your path is no longer _root-eeteecee-slash-foo_; it's _root-slash-eeteecee-slash-foo-invisible-character. Tl;dr [CR-LF](https://github.com/jenkinsci/docker/issues/516). 
 
 ![don't line-feed after midnight]({{ site.url }}/img/2018-02-02-dockerized-jenkins/gremlins.gif)
@@ -64,11 +63,6 @@ Another fun discovery is the working-as-designed behavior of Docker in case a `V
 ![wink-wink]({{ site.url }}/img/2018-02-02-dockerized-jenkins/winkwink.gif)
 
 Ownership of the volume remains with the base image. If a child image's Dockerfile copies some files into a directory mapped to the parent's volume, it is only visible in that single layer, but invisible in the final image. This can be argued, but the fact that `VOLUME` statements are valid in Dockerfiles breaks the stateless nature of containers by mixing in details of persistence. This is better left declared with the `run` command. The only apparent way around this is to bind mount the directory to a host directory. This way the child image is able to copy into the base image's volume bound directory. Why would I want to do that? Maybe to preload Jenkins with build jobs; this way the build scripts also lend themselves to be easiliy version controlled.
-
-### Links
-- [Dockerizing Jenkins](https://dszone.com/articles/dockerizing-jenkins-2-setup-and-using-it-along-wit)
-- [Base Image Volume Issue](https://github.com/moby/moby/issues/3639)
-- [Jenkins Plugin List with Windows Line Ending Issue](https://github.com/jenkinsci/docker/issues/516)
 
 ## Build Scripts
 To generate build scripts I wanted to follow an approach similar to how Jenkins plugins are installed: declare them in a version controlled text file. The only parameter of the build scripts is the repo's git clone url; other details are easily parsed from pom.
@@ -108,9 +102,13 @@ This template is only a bit of bash magic away from an actual build script:
 
 For every repo url replace template variable REPO_NAME in the template, and copy it under `$JENKINS_HOME/jobs/$JOB_NAME`.
 
-### Links
+## Putting the Pieces Together
+The last piece of the puzzle is orchestrating the bits and pieces. Docker-compose ties them neatly together with shared volumes and appropriately chosen environemnt variables.
+
+## Links
+- [Dockerizing Jenkins](https://dszone.com/articles/dockerizing-jenkins-2-setup-and-using-it-along-wit)
+- [Base Image Volume Issue](https://github.com/moby/moby/issues/3639)
+- [Jenkins Plugin List with Windows Line Ending Issue](https://github.com/jenkinsci/docker/issues/516)
 - [Jenkins Declarative Pipeline](https://jenkins.io/blog/2016/12/19/declarative-pipeline-beta/)
 - [Imperative vs Declarative Pipelines](https://stackoverflow.com/questions/44657896/jenkins-pipeline-jenkinsfile-node-and-pipeline-directives)
 
-## Putting the Pieces Together
-The last piece of the puzzle is orchestrating the bits and pieces. Docker-compose ties them neatly together with shared volumes and appropriately chosen environemnt variables.
