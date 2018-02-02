@@ -111,4 +111,3 @@ The last piece of the puzzle is orchestrating the bits and pieces. Docker-compos
 - [Jenkins Plugin List with Windows Line Ending Issue](https://github.com/jenkinsci/docker/issues/516)
 - [Jenkins Declarative Pipeline](https://jenkins.io/blog/2016/12/19/declarative-pipeline-beta/)
 - [Imperative vs Declarative Pipelines](https://stackoverflow.com/questions/44657896/jenkins-pipeline-jenkinsfile-node-and-pipeline-directives)
-
