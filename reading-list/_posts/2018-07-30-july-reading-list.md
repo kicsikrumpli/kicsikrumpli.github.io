@@ -87,12 +87,11 @@ categories: reading-list
 - [ ] [](https://thirtybyforty.com/architect-and-entrepreneur-resources/)
 
 Backpropagation
-- [ ] [](https://www.youtube.com/watch?v=An5z8lR8asY&list=PLBv09BD7ez_4Bs9j3o8l_ZTjQZoN_3Oqs&index=10)
-- [ ] [](https://www.youtube.com/watch?v=vlSI79ringA)
-- [ ] [](https://www.jeremyjordan.me/neural-networks-training/)
-- [ ] [](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/readings/L06%20Backpropagation.pdf)
-- [ ] [](https://www.coursera.org/learn/machine-learning/supplement/pjdBA/backpropagation-algorithm)
-- [ ] 
+- [ ] [Backpropagation](https://www.youtube.com/watch?v=An5z8lR8asY&list=PLBv09BD7ez_4Bs9j3o8l_ZTjQZoN_3Oqs&index=10)
+- [ ] [Backpropagation](https://www.youtube.com/watch?v=vlSI79ringA)
+- [ ] [Backpropagation](https://www.jeremyjordan.me/neural-networks-training/)
+- [ ] [Backpropagation](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2017/readings/L06%20Backpropagation.pdf)
+- [ ] [Backpropagation](https://www.coursera.org/learn/machine-learning/supplement/pjdBA/backpropagation-algorithm)
 
 3d
 - [ ] [Udacity - interactive 3d graphics](https://eu.udacity.com/course/interactive-3d-graphics--cs291)

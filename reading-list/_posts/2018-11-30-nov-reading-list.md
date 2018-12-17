@@ -26,11 +26,11 @@ categories: reading-list
 - [x] [Thread pool self-induced deadlocks](https://www.nurkiewicz.com/2018/09/thread-pool-self-induced-deadlocks.html)
 
 Lenses
-- [ ] [](https://github.com/remeniuk/java-lenses)
-- [ ] [](https://hackernoon.com/taking-a-closer-look-at-lenses-c0304851d54c)
-- [ ] [](https://medium.com/@dtipson/functional-lenses-d1aba9e52254)
-- [ ] [](http://davids-code.blogspot.com/2014/02/immutable-domain-and-lenses-in-java-8.html)
-- [ ] [](https://www.javacodegeeks.com/2015/05/you-wont-believe-what-these-five-lenses-can-show-you-about-your-product.html)
+- [ ] [Lenses](https://github.com/remeniuk/java-lenses)
+- [ ] [Lenses](https://hackernoon.com/taking-a-closer-look-at-lenses-c0304851d54c)
+- [ ] [Lenses](https://medium.com/@dtipson/functional-lenses-d1aba9e52254)
+- [ ] [Lenses](http://davids-code.blogspot.com/2014/02/immutable-domain-and-lenses-in-java-8.html)
+- [ ] [Lenses](https://www.javacodegeeks.com/2015/05/you-wont-believe-what-these-five-lenses-can-show-you-about-your-product.html)
 
 
 Videos

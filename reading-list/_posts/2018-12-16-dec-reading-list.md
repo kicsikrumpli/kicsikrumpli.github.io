@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "2018. July Reading List"
-date:   2018-07-30 08:41:54 +0200
+title:  "2018. December Reading List"
+date:   2018-12-16 08:41:54 +0200
 categories: reading-list
 ---
 
