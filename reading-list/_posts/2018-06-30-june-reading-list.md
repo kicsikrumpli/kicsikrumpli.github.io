@@ -15,7 +15,7 @@ Videos
 - [x] [Design Patterns – Why Event Sourcing](https://www.youtube.com/watch?v=rUDN40rdly8)
 - [ ] [From CRUD to Event Sourcing Why CRUD is the wrong approach for microservices](https://www.youtube.com/watch?v=holjbuSbv3k)
 - [x] [Building a container from scratch in Go](https://www.youtube.com/watch?v=Utf-A4rODH8&t=425s)
-- [ ] [](https://www.youtube.com/watch?v=TjomOMEsJhk)
+- [ ] [https://www.youtube.com/watch?v=TjomOMEsJhk](https://www.youtube.com/watch?v=TjomOMEsJhk)
 - [ ] [Reactive Spring by Juergen Hoeller and Josh Long](https://www.youtube.com/watch?v=TZUZgU6rsNY)
 - [ ] [Reactive Spring](https://www.youtube.com/watch?v=8HYBmpv34Us)
 - [ ] [Spring Fu](https://www.youtube.com/watch?v=-yJ53wzG_lg)
