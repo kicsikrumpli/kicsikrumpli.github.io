@@ -5,7 +5,7 @@ date:   2019-03-30 08:41:54 +0200
 categories: reading-list
 ---
 
-- [ ] [](https://alexnisnevich.github.io/untrusted/)
+- [ ] [Untrusted - a js adventure game](https://alexnisnevich.github.io/untrusted/)
 - [ ] [Serverless GraphQL](https://softwareengineeringdaily.com/2019/03/19/serverless-graphql-with-tanmai-gopal)
 - [ ] [Deep Learning Literature with Kaggle and Google Cloud Platform](https://towardsdatascience.com/deep-learning-literature-with-kaggle-and-google-cloud-platform-6d7d93d14997)
 - [ ] [Category Theory for Programmers](https://bartoszmilewski.com/2014/10/28/category-theory-for-programmers-the-preface/)
