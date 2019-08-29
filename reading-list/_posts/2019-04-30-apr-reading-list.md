@@ -33,7 +33,7 @@ categories: reading-list
 
 Videos
 - [x] [Spring Tips – Bootiful Microsoft Azure](https://www.youtube.com/watch?v=jRgZe7kWDnU )
-    - [ ] [](https://docs.microsoft.com/en-us/java/azure/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault?view=azure-java-stable)
+    - [ ] https://docs.microsoft.com/en-us/java/azure/spring-framework/configure-spring-boot-starter-java-app-with-azure-key-vault?view=azure-java-stable
 - [ ] [Lessons from 300k+ Lines of Infrastructure Code](https://www.infoq.com/presentations/infrastructure-cookbook)
 - [ ] [Live Coding an IntelliJ IDEA Plugin from Scratch](https://www.youtube.com/watch?v=-ZmQD6Fr6KE)
 - [ ] [IntelliJ Plugins by Alec Strong](https://www.youtube.com/watch?v=-l5ChzRiUHE)

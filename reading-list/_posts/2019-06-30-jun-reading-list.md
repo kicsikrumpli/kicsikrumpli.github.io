@@ -8,7 +8,7 @@ categories: reading-list
 - [x] [Tests that sometimes fail](https://samsaffron.com/archive/2019/05/15/tests-that-sometimes-fail )
 - [ ] [Monadic IO](https://underscore.io/blog/posts/2015/04/28/monadic-io-laziness-makes-you-free.html )
 - [ ] [Driving Headless Chrome with Python](https://duo.com/decipher/driving-headless-chrome-with-python )
-    - [ ] [](https://stackoverflow.com/questions/9776351/creating-a-headless-chrome-instance-in-python )
+    - [ ] https://stackoverflow.com/questions/9776351/creating-a-headless-chrome-instance-in-python
 - [x] [Scala Futures and Promises](https://docs.scala-lang.org/overviews/core/futures.html )
 - [ ] [Build and Secure APIs with Scala and the Play Framework](https://auth0.com/blog/build-and-secure-a-scala-play-framework-api/)
 
