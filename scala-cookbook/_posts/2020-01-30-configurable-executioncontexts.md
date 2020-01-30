@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "Custom Configurable Execution Contexts"
+date:   2020-01-30 15:37:54 +0200
+categories: scala play cookbook tips&tricks
+---
+
+## Inject Custom Execution Context
+
+```scala
+class MyBlockingClass @Inject()(implicit executionContext: MyCustomExecutionContext)
+```
+
+## Define Custom Execution Context
+
+- the base `CustomExecutionContext` allows execution context to be configured via `application.conf`
+- by the name `threadpools.my.blocking.ec`
+
+```scala
+@Singleton
+class MyCustomExecutionContext @Inject() (system: ActorSystem)
+  extends CustomExecutionContext(system, "threadpools.my.blocking.ec")
+```
+
+## Configure Execution Context
+
+configure in `application.conf`
+
+```scala
+threadpools.my.blocking.ec.executor = "thread-pool-executor"
+threadpools.my.blocking.ec.thread-pool-executor.fixed-pool-size = 8
+```
+
+## Configure Guice to Inject Custom Execution Context
+
+in `module.scala`
+
+```scala
+class Module extends AbstractModule {
+
+  override def configure(): Unit = {
+    bind(classOf[MyCustomExecutionContext]).asEagerSingleton()
+  }
+}
+```
+
+## Sources
+
+- [Play Documentation](https://www.playframework.com/documentation/2.6.x/api/scala/play/api/libs/concurrent/CustomExecutionContext.html?_ga=2.96491225.77706640.1570018826-252782800.1570018826)
+- [via](https://discuss.lightbend.com/t/play-2-6-threadpools-exemple-not-relevant/1224/2)
+- [also](https://github.com/playframework/playframework/blob/912b8323666c11fd125aba4dea9bcee1ae77c358/documentation/manual/releases/release26/migration26/Migration26.md)
