@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Testing for Future Failures"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 - Use ScalaFutures mixin

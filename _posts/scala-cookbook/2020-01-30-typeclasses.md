@@ -2,7 +2,7 @@
 layout: post
 title:  "Type Classes"
 date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+categories: scala cookbook
 ---
 
 Type classes are a generic traits, hat allow attaching interfaces to types. Allows for

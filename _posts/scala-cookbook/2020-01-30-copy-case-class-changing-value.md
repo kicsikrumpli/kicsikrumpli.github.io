@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Copy Case Class While Changing Some Values"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 One of the built in features of case classes is to make a copy while changing some of its fields:

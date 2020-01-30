@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "TITLE"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+title:  "Handcranked WSClient"
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 `WSClient` is normylly injected by Guice. It is also possible to instantiate it manually:

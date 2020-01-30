@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "TITLE"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+title:  "Run Sbt Command Non-Interactively"
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 Instead of using sbt in interactive mode:

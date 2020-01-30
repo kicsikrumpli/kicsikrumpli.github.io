@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Mix and Match with Mockito"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 Although concrete values and matchers cannot be mixed, it is possible to use a matcher for exact values:

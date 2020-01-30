@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Map with Either Type"
-date:   2020-01-30 15:37:54 +0200
-categories: scala cookbook tips&tricks
+date:   2020-01-30 08:00:00 +0200
+categories: scala cookbook
 ---
 
 > Either is right-biased, which means that Right is assumed to be the default case to operate on. If it is Left, operations like map, flatMap, ... return the Left value unchanged
